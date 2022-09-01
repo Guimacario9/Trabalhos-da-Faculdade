@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTf-8" />
+		<title>Trabalho Pagina com abas </title>
+		<link rel="stylesheet" type="text/css" href="css/Style.css" /> 
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="TabControl"> 
+				<div id="header"> 
+					<ul class="abas"> 
+						<li> <div class="aba"> 
+								<span>HTML</span> 
+							 </div> 
+						</li> 
+						<li> <div class="aba"> 
+								<span>CSS</span> 
+							 </div> 
+						 </li> 
+						 <li> <div class="aba"> 
+								<span>JQUERY</span> 
+							 </div> 
+						 </li> 
+						 </ul> 
+				 </div> 
+				 <div id="content"> 
+					<div class="conteudo"> 
+						HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) 
+						é uma linguagem de marcação utilizada na construção de páginas na Web. 
+					</div> 
+					<div class="conteudo"> 
+						Cascading Style Sheets (CSS) é uma linguagem de folhas de estilo utilizada para definir a apresentação de documentos escritos 
+						em uma linguagem de marcação, como HTML ou XML. O seu principal benefício é a separação entre o formato e o conteúdo de um
+						documento. 
+					</div> 
+					<div class="conteudo"> 
+						jQuery é uma biblioteca JavaScript cross-browser desenvolvida para simplificar os scripts client side que interagem com o HTML.	
+					</div> 
+				 </div> 
+			 </div>
+		</div>
+
+	</body>
+	<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+	<script type="text/javascript"> 
+		$(document).ready(function(){  
+			$("#content div:nth-child(1)").show();  
+			$(".abas li:first div").addClass("selected");	 
+			$(".aba").click(function(){  
+				$(".aba").removeClass("selected");  
+				$(this).addClass("selected"); 
+				var indice = $(this).parent().index(); indice++; 
+				$("#content div").hide(); 
+				$("#content div:nth-child("+indice+")").show();  
+			}); 
+			$(".aba").hover(  
+				function(){$(this).addClass("ativa")},  
+				function(){$(this).removeClass("ativa")}  
+			);	
+		}); 
+	</script>
+
+
+</html>

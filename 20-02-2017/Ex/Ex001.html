@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+</head>
+<style>
+.miniatura{
+	width:100px;
+	height:60px;
+}
+#destaque{
+width:500px;
+height:300px;
+}
+</style>
+<body>
+<img src="img/01.jpg" class="miniatura"/>
+<img src="img/02.jpg" class="miniatura"/>
+<img src="img/03.jpg" class="miniatura"/>
+<img src="img/04.jpg" class="miniatura"/>
+<img src="img/05.jpg" class="miniatura"/><br/>
+<img src="img/01.jpg" class="destaque"/>
+</body>
+<script src="jquery-1.12.0.min.js"></script>
+<script> 
+$('.miniatura').click(function(){
+	$('#destaque').slideUp(100);
+	foto=$(this).attr('src');
+	$('#destaque').attr('src',foto);
+	$('#destaque').slideDown(100);
+}); 
+</script>
+
+</html>

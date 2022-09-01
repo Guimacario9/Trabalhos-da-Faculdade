@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Mensagem</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<div id="message-form">
+		<form action="javascript:void(0);" method="POST">
+			<fieldset>
+				<header>
+					<h3>Envie sua mensagem!</h3>
+				</header>
+				<p>
+					<textarea name="" id="message" placeholder="Sua mensagem vai aqui ..."></textarea>
+				</p>
+				<footer>
+					<p class="clearfix">
+					<span id="message-characters">120 caracteres restantes.</span>
+						<input type="submit" id="button-send" value="Enviar">
+					</p>
+				</footer>
+			</fieldset>
+		</form>
+	</div> 
+	<script src="jquery-1.12.0.min.js"></script>
+    <script src="Script.js"></script>
+</body>
+</html>

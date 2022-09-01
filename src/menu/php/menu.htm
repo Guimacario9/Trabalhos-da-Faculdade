@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+	<head>    
+		<meta charset="UTF-8" />
+		<title>Menu</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="mainpic">
+				<h1>RIA<span class="lighter"> by AJAX</span></h1>
+				<h2>Rich Internet Application</h2>
+			</div>   
+			
+			<div id="menu">
+				<a class="menu_item" href="ajax.htm">AJAX</a>
+				<a class="menu_item" href="html.htm">HTML</a>
+				<a class="menu_item" href="css.htm">CSS</a>
+				<a class="menu_item" href="jquery.htm">jQuery</a>
+				<a class="menu_item" href="xml.htm">XML</a>
+				<a class="menu_item" href="php.htm">PHP</a>
+			</div>
+			<div id="content"></div>
+		</div>
+	</body>
+	<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+	<script>
+		$('#content').load($('.menu_item').eq(0).attr('href'));
+		
+		$('.menu_item').click(function(){
+			var url = $(this).attr('href');
+			$('#content').load(url, function(r,s,x) {
+				if(s=='error') $('#content').html('<p>Erro ao carregar página: <b>'+url+'</b></p>');
+			});
+			return false;
+		});
+	</script>	
+</html>

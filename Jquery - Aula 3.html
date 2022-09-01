@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<style>span{cursor: pointer;}
+
+.normal {
+position: absolute;
+height: 100px;
+width: 400px;
+opacity: 0.5
+}
+.destacar {
+height: 110px;
+width: 440px;
+opacity: 1.0
+}
+</style>
+</head>
+<body>
+<h1>Exercicios JQuery</h1>
+<input type="button" value="Clicar" />
+
+<div id="conteudo"><p>Clique no botão! (Função HTML)</p></div>
+
+<br>
+<hr>
+<br>
+<table>
+<h3>Clique na tabela! - (Função CSS)</h3>
+<tr><td>Mouse</td><td>R$ 39,00</td></tr>
+<tr><td>Teclado</td><td>R$ 45,00</td></tr>
+<tr><td>Impressora</td><td>R$ 299,00</td></tr>
+<tr><td>Pen Drive</td><td>R$ 85,00</td></tr>
+<tr><td>Notebook</td><td>R$ 2.999,99</td></tr>
+</table>
+<br>
+<hr>
+<br>
+<h3> Adicionar, Limpar Tags - (Função Append/Empty)</h3>
+<span id="adicionar">Adicionar</span> |
+<span id="limpar">Limpar</span>
+<div id="conteudo2"></div>
+<br>
+<hr>
+<br>
+<h3> Obter valor de formulario - (Função Val)</h3>
+<input type="text" name="frase" id="frase" />
+<input type="button" value="Adicionar" id="inserir" />
+<div id="conteudo3"></div>
+<br>
+<hr>
+<br>
+<h3> Alterar o valor ou atributo de uma tag - (Função Attr/removeAttr)</h3>
+<input id="carregar" type="button" value="Carregar" /> <br />
+<img id="imagem" />
+<br>
+<hr>
+<br>
+<h3> Alterar Classes - (addClass/ removeClass)</h3>
+<img id="img" class="normal" src="imagem.jpg" />
+<br><br><br><br><br><br>
+<hr>
+<br>
+<h3> Laço de repetição meio "SQÑ" - (EACH)</h3>
+<ul>
+<li>Pen Drive</li>
+<li>Impressora</li>
+<li>Disquete</li>
+<li>Zip Drive</li>
+<li>Notebook</li>
+</ul>
+<br>
+<hr>
+<br>
+<h3> Para contar quantas "tags" existem" - (length)</h3>
+<ul>
+<li>Pen Drive</li>
+<li>Impressora</li>
+<li>Disquete</li>
+<li>Zip Drive</li>
+<li>Notebook</li>
+
+</ul>
+<br>
+<hr>
+<br>
+<h3> Metodo de encontrar elementos(tags,) dentro de outros elementos - (Função Find)</h3>
+<p>Usar <span>jQuery</span> é <span>fantástico</span>!</p>
+<br>
+<hr>
+<br>
+<h3> Método para mudar o valor das cordenadas de um objeto (OFSET)</h3>
+<div id="div" style="border: 1px solid blue;"></div>
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+<script>
+
+$('input').click(function() {
+$('#conteudo').html('<p>Botão pressionado!</p>');
+});
+
+$('table').click(function() {
+$('tr:even').css('background','#c6e2ff');
+});
+
+
+$('#adicionar').click(function(){
+$('#conteudo2').append('Nova linha <br />');
+});
+
+$('#limpar').click(function(){
+$('#conteudo2').empty();
+});
+
+$('#inserir').click(function(){
+frase = $('#frase').val();
+$('#conteudo3').append(frase + '<br />');
+});
+
+$('#carregar').click(function(){
+if($('#carregar').attr('value')=='Carregar') {
+$('#imagem').attr('src','imagem.jpg');
+$('#imagem').fadeIn('slow');
+$('#carregar').attr('value','Remover');
+}
+else {
+$('#imagem').removeAttr('src');
+$('#imagem').fadeOut('slow');
+$('#carregar').attr('value','Carregar');
+}
+});
+
+$('#img').hover(
+function() {
+$(this).addClass('destacar');
+},
+function() {
+$(this).removeClass('destacar');
+}
+);
+
+$('li').each(function(i){
+$(this).css('color', (i%2) ?'#F00' :'#00F');
+});
+
+var qtde = $('li').length;
+alert('Existem ' + qtde + ' itens na lista. Função Lenght');
+
+$('p').find('span').css('color', 'red');
+
+$('#div').offset({top:'1900',left:'80'});
+var coord = $('#div').offset();
+alert('top: ' + coord.top + '\nleft: ' + coord.left);
+
+</script>
+</html>

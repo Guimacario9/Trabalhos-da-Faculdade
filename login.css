@@ -1,0 +1,22 @@
+body, input {
+font-family: 'Times New Roman';
+font-size: 18px;
+}
+.success {
+color: #060;
+}
+.error {
+color: #F00;
+}
+#content {
+background-color: #eee;
+width: 250px;
+margin: 0 auto;
+border: 1px solid #aaa;
+padding: 15px;
+border-radius: 10px;
+}
+#formLogin input[type=text], #formLogin input[type=password] {
+width: 245px;
+margin-bottom: 15px;
+}

@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<style>
+	#campo {
+	display:none;
+	}
+</style>
+</head>
+<body>
+<div id="frase">Clique aqui para editar..</div>
+<input type="text" id="campo" />
+
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+<script>
+$('#frase')
+
+.dblclick(function() {
+$(this).hide();
+$('#campo').css('display','block');
+$('#campo').focus();
+});
+
+$('#campo').blur(function() {
+$('#frase').html($('#campo').val());
+$('#campo').css('display','none');
+$('#frase').css('display','block');
+
+});
+</script>
+</html>

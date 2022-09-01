@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<style>
+#conteudo{
+position:absolute;
+width:300px;
+height:300px;
+background-color:gray;
+}
+
+
+</style>
+</head>
+<body>
+<div id="conteudo">
+
+<table>
+<tr align="center"><td style="width:100px; background-color:#95a5a6;"><b id="1">HTML</b></td><td style="width:100px; background-color:#95a5a6;"><b id="2">CSS<b/></td><td style="width:100px; background-color:#95a5a6;"><b id="3">JQuery</b></td></tr>
+<p id="corpo1" style="display:none;">HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa ... Documentos HTML podem ser interpretados por navegadores.</p>
+<p id="corpo2" style="display:none;">Cascading Style Sheets (ou simplesmente CSS) é uma linguagem de folhas de ... que ficou sem nova versão de 2001 a 2006, o suporte ao CSS pode variar.</p>
+<p id="corpo3" style="display:none;">Free HTML CSS JavaScript DOM jQuery XML AJAX Angular ASP.</p>
+</div>
+
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+<script>
+$('#1').click(function(){
+$('#corpo1').slideToggle('slow');
+$('td').css('background-color','gray');
+});
+
+$('#2').click(function(){
+$('#corpo2').slideToggle('slow');
+$('#2').css('background-color','gray');
+});
+
+$('#3').click(function(){
+$('#corpo3').slideToggle('slow');
+$('#3').css('background-color','gray');
+});
+</script>
+</html>

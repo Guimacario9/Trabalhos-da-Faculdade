@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ex02</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/Style.css" /> 
+<body>
+<div id="wrap">
+  <div id="tabcontrol">
+    <div id="header">
+      <ul class="abas">
+         <li><div class="aba">
+             <span>Html</span>
+          </div>
+          </li> 
+           <li><div class="aba">
+             <span>Css</span>
+          </div>
+          </li>   
+           <li><div class="aba">
+             <span>Jquery</span>
+          </div>
+          </li> 
+       </ul>
+      </div>
+      <div id="Content">
+       <div class="conteudo">
+       <p>HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML.</p>
+       </div> 
+       <div class="conteudo">
+       <p>Cascading Style Sheets (CSS) é uma linguagem de folhas de estilo utilizada para definir a apresentação de documentos escritos em uma linguagem de marcação, como HTML ou XML.</p>
+       </div> 
+       <div class="conteudo">
+       <p>jQuery é uma biblioteca de funções JavaScript que interage com o HTML, desenvolvida para ... Principais funcionalidades do jQuery: Resolução da incompatibilidade entre os navegadores. Redução de código. Reutilização do código através de plugins.</p>
+         </div> 
+      </div>
+   </div>
+</div>
+<script type="text/javascript"> 
+		$(document).ready(function(){  
+			$("#content div:nth-child(1)").show();  
+			$(".abas li:first div").addClass("selected");	 
+			$(".aba").click(function(){  
+				$(".aba").removeClass("selected");  
+				$(this).addClass("selected"); 
+				var indice = $(this).parent().index(); indice++; 
+				$("#content div").hide(); 
+				$("#content div:nth-child("+indice+")").show();  
+			}); 
+			$(".aba").hover(  
+				function(){$(this).addClass("ativa")},  
+				function(){$(this).removeClass("ativa")}  
+			);	
+		}); 
+	</script>
+	
+</body>
+</html>

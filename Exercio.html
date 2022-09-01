@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>jQuery</title>
+</head>
+<body>
+<input type="button" value="Mudar Cor" id="btn1">
+<input type="button" value="Mudar Cor" id="btn2">
+<input type="button" value="Mudar Cor" id="btn3">
+  <p><strong class="destaque">Aula 1 </strong><br/> Criação de página web</p>
+  <p><strong>Aula 2 </strong><br/> Criação de banco de dados</p>
+  <p><strong class="normal">Aula 3 </strong><br/> Criação de sistema completo</p>
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+<script>
+    $('input').click(function(){
+    $('#strong').css({'background':'orange'});
+    $('#p').css({'background':'orange'});
+    }
+);
+</script>
+</html>

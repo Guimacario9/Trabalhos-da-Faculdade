@@ -1,0 +1,25 @@
+﻿resize
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Resize</title>
+</head>
+<body>
+<div id="resize"></div>
+92
+<div id="resize"></div>
+</body>
+<script src="http://code.jquery.com/jquery-2.0.3.js
+"></script>
+<script>
+$(window).resize(function() {
+w =
+$(window).width();
+h =
+$(window).height();
+$('#resize').html('largura: ' + w + '<br />altura: '
++ h);
+});
+</script>
+</html>

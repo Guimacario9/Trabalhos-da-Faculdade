@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ex01</title>
+</head>
+<style>
+.miniatura{
+	width:100px;
+	height:60px;
+}
+#destaque{
+width:500px;
+height:300px;
+}
+</style>
+<body>
+<script src="jquery-1.12.0.min.js"></script>
+    <img src="img/Foto1.jpg" class="miniatura" />
+    <img src="img/Foto2.jpg" class="miniatura" />
+    <img src="img/Foto3.jpg" class="miniatura" />
+    <img src="img/Foto4.jpg" class="miniatura" />
+    <img src="img/Foto5.jpg" class="miniatura" />
+    <br />
+     <img src="img/Foto1.jpg" id="destaque" />
+<script> 
+$('.miniatura').click(function(){
+	$('#destaque').slideUp(100);
+	foto=$(this).attr('src');
+	$('#destaque').attr('src',foto);
+	$('#destaque').slideDown(100);
+}); 
+</script>
+
+</body>
+</html>
