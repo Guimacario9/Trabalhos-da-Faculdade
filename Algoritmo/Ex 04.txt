@@ -1,0 +1,9 @@
+var
+n : inteiro
+s :real
+inicio
+escreva("entre com o valor de n: ")
+leia (n)
+s <- 1/n + (2/(n-1)) + (3/(n-2)) + ((n-1)/2) + n
+escreval ("o valor de s = ",s)
+fimalgoritmo

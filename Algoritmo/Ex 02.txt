@@ -1,0 +1,15 @@
+algoritmo "Múltiplos"
+var
+i, n, numero, resto: inteiro
+inicio
+escreva("Qual é o número? ")
+leia(numero)
+escreva("Quantos múltiplos deseja calcular? ")
+leia(n)
+para i de 1 ate n faca
+resto <- numero mod i
+se resto = 0 entao
+escreva(i)
+fimse
+fimpara
+fimalgoritmo

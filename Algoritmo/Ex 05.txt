@@ -1,0 +1,15 @@
+algoritmo "soma"
+// Função : calcular os 10 primeiros termos da serie   soma=1/1+1/2+1/3+1/4...+1/n.
+// Autor : Edenilso Belo Rebello
+// Data : 11/06/2013
+// Seção de Declarações
+var
+soma:real
+i:inteiro
+inicio
+// Seção de Comandos
+para i de 1 ate 10 faca
+soma:=(1/1)+(1/2)+(1/3)+(1/4)+(1/i)
+escreval("o resultado e:",soma)
+fimpara
+fimalgoritmo

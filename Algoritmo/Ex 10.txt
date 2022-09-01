@@ -1,0 +1,45 @@
+algoritmo "Valida data"
+var
+   dia, mes, ano: inteiro
+   valida: logico
+inicio
+   escreva("Informe a data [dd mm aaaa]: ")
+   leia(dia)
+   leia(mes)
+   leia(ano)
+   valida <- verdadeiro
+   se ((ano < 1000) OU (ano > 2999)) entao
+      valida <- falso
+   senao
+      se ((mes < 1) OU (mes > 12)) entao
+         valida <- falso
+      senao
+         se ((mes = 4) OU (mes = 6) OU (mes = 9) OU mes = 11)) entao
+            se ((dia < 1) OU (dia > 30))entao
+               valida <- falso
+            fimse
+         senao
+            se (mes = 2) entao
+               se (((ano % 4 = 0) E (ano % 100 <> 0)) OU (ano % 400 = )) entao
+                  se ((dia < 1) OU (dia > 29)) entao
+                     valida <- falso
+                  fimse
+               senao
+                  se ((dia < 1) OU (dia > 28)) entao
+                     valida <- falso
+                  fimse
+               fimse
+            senao
+               se ((dia < 1) OU (dia > 31)) entao
+                  valida <- falso
+               fimse
+            fimse
+         fimse
+
+   fimse
+   se (valida) entao
+      escreval(dia, "/", mes, "/", ano, " - Data válida")
+   senao
+      escreval(dia, "/", mes, "/", ano, " - Data inválida")
+   fimse
+fimalgoritmo

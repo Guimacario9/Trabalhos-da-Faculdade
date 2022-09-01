@@ -1,0 +1,31 @@
+algoritmo "notifica_por_poluicao"  
+ // Função : Notificar as empresas de acordo com o índece de poluição  
+ // Autor : Cléuber José  
+ // Data : 04/10/2014  
+ // Seção de Declarações   
+ var  
+   indice:real  
+ inicio  
+ // Seção de Comandos   
+   escreval("================Índice de poluição=============")  
+   escreva("Informe o índice de poluição:")  
+   leia(indice)  
+   escreval()  
+   se (indice<0.3)entao  
+     escreval("Nível de poluição aceitável")  
+   senao  
+     se((indice>=0.3) e (indice<0.4)) entao  
+       escreval("Grupo 1 deve encerrar as atividades")  
+     senao  
+       se ((indice>=0.4) e (indice<0.5)) entao  
+         escreval("Grupo 2 e 3 deve encerras suas atividades")  
+       senao  
+         se (indice>=0.5) entao  
+          escreval("Todos os grupos devem encerras as suas atividades")  
+         fimse  
+       fimse  
+     fimse  
+   fimse  
+   escreval()  
+   escreval("=======================FIM=====================")  
+ fimalgoritmo  

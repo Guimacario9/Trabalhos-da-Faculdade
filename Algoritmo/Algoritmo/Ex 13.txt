@@ -1,0 +1,25 @@
+Leia um número e exiba seu sucessor.
+Algoritmo “sucessor”
+Var Numero1, : inteiro
+Inicio
+Escreva (“digite um número”)
+Leia (numero1)
+Numero1 , Numero1 + 1
+Escreva ( “ Resultado”, Numero1)
+Fimalgoritmo
+2. Calcular a quantidade dinheiro gasta por um fumante. Dados: o número de anos que ele fuma, o nº de cigarros fumados por dia e opreço de uma carteira.
+Algoritmo “cigarro”
+Cigarros_carteira 20
+Dias_ano 365
+Var anos, cigarros_dia: inteiro
+Preco, total: real
+Inicio
+Escreva (“A quantos anos você fuma”)
+Leia( anos)
+Escreva(“Quantos cigarros você fuma por dia”)
+Leia (cigarros_dia)
+Escreva(“preço da carteira”)
+Leia(preco)
+Total (cigarros_dias * dias_anos * preco / cigarro_carteira) * ano
+Escreva (“totalgasto”: total)
+Fimalgoritmo

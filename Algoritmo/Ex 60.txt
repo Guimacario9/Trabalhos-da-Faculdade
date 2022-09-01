@@ -1,0 +1,19 @@
+algoritmo "x"
+var
+A, B: vetor[1..100] de inteiro
+i, j, k: inteiro
+inicio
+escreva ("Informe os 100 elementos do vetor A: ")
+para i de 1 ate 100 faca
+leia (A[i])
+fimpara
+k <- 0
+para i de 1 ate 100 faca
+se (A[i] > 0) entao
+k <- k+1
+B[k] <- A[i]
+fimpara
+para j de 1 ate k faca
+escreva (B[j])
+fimpara
+fimalgoritmo

@@ -1,0 +1,20 @@
+algoritmo "Calcular Distância entre 2 Pontos"
+
+
+var
+x1,x2,y1,y2, d: real
+
+inicio
+escreval ("***Calcular Distância entre 2 Pontos***")
+escreva ("Qual o valor de x1?")
+leia (x1)
+escreva ("Qual o valor de x2?")
+leia (x2)
+escreva ("Qual o valor de y1?")
+leia (y1)
+escreva ("Qual o valor de y2?")
+leia (y2)
+d <- raizq((x2-x1)^2)+((y2-y1)^2)
+escreva ("A distância entre os dois pontos eh: ", d: 5:2)
+
+fimalgoritmo

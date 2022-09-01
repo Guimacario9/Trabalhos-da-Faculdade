@@ -1,0 +1,28 @@
+var 
+velocidadeMaxima,velocidade:real 
+multa1,multa2,multa3:real 
+leitorVelocidade:real 
+inicio 
+multa1<-50 
+multa2<-100 
+multa3<-200 
+escreval("Digite a velocidade máxima permitida:") 
+leia(velocidadeMaxima) 
+escreval("Digite a velocidade do veiculo:") 
+leia(velocidade) 
+leitorVelocidade<- velocidade - velocidadeMaxima 
+se (leitorVelocidade > 0) e (leitorVelocidade <= 10) entao 
+escreval("Ele terá uma multa de",multa1," reais") 
+senao 
+se (leitorVelocidade > 10) e (leitorVelocidade <= 30) entao 
+escreval("Ele terá uma multa de",multa2," reais") 
+senao 
+se(leitorVelocidade > 30) entao 
+escreval("Ele terá uma multa de",multa3," reais") 
+senao 
+escreval("Nenhuma multa") 
+fimse 
+fimse 
+fimse 
+
+fimalgoritmo

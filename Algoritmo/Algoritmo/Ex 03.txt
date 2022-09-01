@@ -1,0 +1,31 @@
+algoritmo "Ex03"
+var
+n,j,c,n1,n2,par,d:inteiro
+media,aux:real
+inicio
+leia(n1,n2)
+se n1<n2 entao
+para c de n1 ate n2 faca
+n<- n+n1+n2
+d<- d+2
+fimpara
+c<- c-1
+media<- n/d
+escreval("A média dos valores é :",media)
+fimse
+se n1 > n2 entao
+para c de n2 ate n1 faca
+aux<- aux + 1
+fimpara
+se (n1 mod 2 =0)e(n2 mod 2=0) entao
+aux<- (aux/2) + 0.5
+fimse
+se (n1 mod 2 <>0)e(n2 mod 2<>0) entao
+aux<- (aux/2) - 0.5
+fimse
+se (n1 mod 2 = 0)e(n2 mod 2<>0) ou (n1 mod 2 <>0)e(n2 mod 2 = 0)entao
+aux<- (aux/2)
+escreval("A quantidade de pares é :",aux)
+fimse
+fimse
+fimalgoritmo

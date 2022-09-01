@@ -1,0 +1,37 @@
+algoritmo "Exercicio 6"
+
+
+var
+matriz1 : vetor [1..30,1..30] de real
+matriz2 : vetor [1..30,1..30] de real
+matriz3 : vetor [1..30,1..30] de real
+a,b,c:inteiro
+inicio
+para a de 1 ate 30 faca
+   para b de 1 ate 30 faca
+      escreval ("Primeira matrix 30x30, Linha: ",a,". Coluna: ",b,". Digite um número: ")
+      leia (matriz1[a,b])
+   fimpara
+fimpara
+
+para a de 1 ate 30 faca
+   para b de 1 ate 30 faca
+      escreval ("Segunda matrix 30x30, Linha: ",a,". Coluna: ",b,". Digite um número: ")
+      leia (matriz2[a,b])
+   fimpara
+fimpara
+
+para a de 1 ate 30 faca
+   para b de 1 ate 30 faca
+      para c de 1 ate 30 faca
+         matriz3[a,b] <- matriz3[a,b]+( matriz1[a,c]* matriz2[c,b] )
+      fimpara
+   fimpara
+fimpara
+
+para a de 1 ate 30 faca
+     para b de 1 ate 30 faca
+          escreval ("Linha: ",a,". Coluna: ",b,". Total: ",matriz3[a,b])
+     fimpara
+fimpara
+fimalgoritmo

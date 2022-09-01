@@ -1,0 +1,22 @@
+algoritmo "10x10"
+// Função :
+// Autor :
+// Data : 05/12/2014
+// Seção de Declarações 
+var
+matr:vetor[1..10,1..10] de real
+matr2:vetor[1..10,1..10] de real
+l,c:inteiro
+inicio
+PARA l de 1 ate 10 FACA
+PARA c de 1 ate 10 FACA
+escreval("Digite o número referente a linha",l," e coluna",c,":")
+leia(matr[l,c])
+matr2[l,c] <- matr[l,c]
+FIMPARA
+FIMPARA
+escreval("  Matriz Final ")
+PARA l de 1 ate 10 FACA
+PARA c de 1 ate 10 FACA
+escreval("| ",matr2[l,c]," | ")
+fimalgoritmo

@@ -1,0 +1,28 @@
+algoritmo "Ex57"
+var
+   x: vetor[1..20] de inteiro
+   i, j, cont: inteiro
+   nao_consta: logico
+inicio
+   para i de 1 ate 20 faca
+      escreva("Informe x[", i, "]: ")
+      leia(x[i])
+   fimpara
+   para i de 1 ate 20 faca
+      nao_consta <- verdadeiro
+      para j de 1 ate i-1 faca
+         se (x[i] = x[j]) entao
+            nao_consta <- falso
+         fimse
+      fimpara
+      se (nao_consta) entao
+         cont <- 1
+         para j de i+1 ate 20 faca
+            se (x[i] = x[j])entao
+               cont <- cont + 1
+            fimse
+         fimpara
+         escreval(x[i], " - ", cont, " vez(es)")
+      fimse
+   fimpara
+fimalgoritmo

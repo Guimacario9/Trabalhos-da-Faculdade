@@ -1,0 +1,37 @@
+Algoritmo "Trabalho 2" 
+var
+x,maior,menor:inteiro
+inicio
+repita
+   escreval ("digite um numero inteiro positivo")
+   leia (x)
+   se (x < 0) entao
+      escreval ("Voce digitou um numero negativo")
+   senao
+      maior <- x
+      menor <- x
+      enquanto (x <> 0) faca
+         escreval ("digite um numero inteiro positivo")
+         leia (x)
+         se (x < 0) entao
+            escreval ("Voce digitou um numero negativo")
+         senao
+            se (x <> 0) entao
+               se (maior < x) entao
+                  maior <- x
+               fimse
+               se (menor > x) entao
+                  menor <- x
+               fimse
+            fimse
+         fimse
+      fimenquanto
+   fimse
+ate (x = 0)
+se (maior = 0) e (menor = 0) entao
+   escreval ("Voce encerrou o programa sem digitar um número inteiro e positivo.")
+senao
+   escreval ("O maior número digitado é: ",maior)
+   escreval ("O menor número digitado é: ",menor)
+fimse
+fimalgoritmo

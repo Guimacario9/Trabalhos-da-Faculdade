@@ -1,0 +1,89 @@
+#include<stdlib.h>
+#include<stdio.h>
+
+int main(void)
+{
+  
+int idade, menor_idade, maior_idade, acc_h,acc_m, cont_mulher, cont_salario;  
+float salario, media_salario, porcentagem_mulher, soma_salario; 
+char sexo;
+
+acc_h = acc_m = cont_salario = cont_mulher= 0;
+
+printf ("Informe a idade do habitante (0 - sair):");
+scanf ("%d",&idade);
+if (idade <= 0) exit (0);
+fflush (stdin);
+printf ("informe o sexo do habitante:");  // em minha compilação aki da erro nao sei o pq tente resolver
+sexo = getchar ();
+sexo =toupper (sexo);
+printf ("Informe o salario do habitante:");
+scanf ("%f",&salario);
+
+menor_idade = idade;
+maior_idade = idade;
+
+if (sexo == 'F' && salario <= 300)
+cont_mulher = 1;
+
+if (sexo == 'F')
+acc_m = 1;
+
+if (sexo == 'M')
+acc_h ++;
+
+cont_salario ++;
+soma_salario = salario;
+
+for (;;)
+{
+    printf("Informe a idade do habitante (0 - sair): ");
+    scanf("%d", &idade);
+    if (idade <= 0) break;
+    fflush(stdin);
+    printf("Informe o sexo do habitante: ");
+    sexo = getchar ();
+    sexo = toupper (sexo);
+    printf("Informe o salario do habitante: ");
+    scanf("%f", &salario);
+
+    //verificar a maior e menor idade do grupo
+    if (idade > maior_idade)
+    maior_idade = idade;
+    if (idade < menor_idade)
+    menor_idade = idade;
+
+    //verifica quantas mulheres tem salário de até 300,00
+    if (sexo == 'F' && salario <= 300)
+    cont_mulher ++;
+ 
+    if (sexo == 'F')
+    acc_m ++;
+      
+    //verifica quantos homens existem no grupo pesquisado
+    if (sexo == 'M')
+    acc_h ++;
+
+    //acumular salário do grupo pesquisado
+    cont_salario ++;
+    //somar todos os salários do grupo pesquisado
+    soma_salario += salario;
+}    
+
+
+    //media de salário do grupo pesquisado
+     media_salario = soma_salario / cont_salario;
+
+   //calculando a porcentagem de mulheres
+   porcentagem_mulher = (cont_mulher * 100)/acc_m;
+
+printf("A media do grupo eh %.2f\n",media_salario);
+printf("A maior idade do grupo eh %d\n",maior_idade);
+printf("A menor idade do grupo eh %d\n",menor_idade);
+printf("A percentagem do total de mulheres com salario ate R$ 300,00 eh %.2f\n",porcentagem_mulher); 
+printf("A quantidade de homens no grupo eh %d\n",acc_h);
+
+
+return (EXIT_SUCCESS);
+
+} //fim do programa
